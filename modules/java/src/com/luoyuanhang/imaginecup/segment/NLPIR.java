@@ -33,10 +33,10 @@ public class NLPIR {
 		public double NLPIR_FileProcess(String sSourceFilename,String sResultFilename,int bPOStagged);
 		//引入用户自定义词典
 		public int NLPIR_ImportUserDict(String sFilename,Boolean bOverwrite);
-		//
-		public int NLPIR_GetParagraphProcessAWordCount(String sParagraph);
-
+		//添加用户新词并标注词性
+		public int NLPIR_AddUserWord(String sWords);
 	}
+	
 	/**
 	 * 对一段文字进行分词，返回标注词性的分词结果
 	 * 
@@ -78,6 +78,8 @@ public class NLPIR {
 		String system_charset = "UTF-8";
 		int charset_type = 1;
 		int init_flag = CLibrary.Instance.NLPIR_Init(argu.getBytes(system_charset), charset_type, "1".getBytes(system_charset));
+		
+		CLibrary.Instance.NLPIR_AddUserWord("首页 PAGE");
 		
 		if(0 == init_flag){
 			System.out.println("init fail!");

@@ -63,6 +63,8 @@ public class BUILDXMLDOC {
 		for(int i = 0; i < sentences.length - 1; i++){
 			//动态添加元素
 			Element ele_s = ele_para.addElement("s").addAttribute("sid",""+(i+1)).addText(cutWordsAndPure(sentences[i]));
+//			Element ele_s = ele_para.addElement("s").addAttribute("sid",""+(i+1)).addText(sentences[i]);
+
 		}
 		//将XML输出到文件
 		try{
@@ -148,8 +150,8 @@ public class BUILDXMLDOC {
 		Element text = root.element("text");
 		Element body = text.element("text_body");
 		Element para = body.element("para");
-		List nodes = para.elements("s");
-		for(Iterator it = nodes.iterator();it.hasNext();){
+		List<Element> nodes = para.elements("s");
+		for(Iterator<Element> it = nodes.iterator();it.hasNext();){
 			Element element = (Element)it.next();
 			String input = element.getText();
 			String output = cutWordsAndPure(input);

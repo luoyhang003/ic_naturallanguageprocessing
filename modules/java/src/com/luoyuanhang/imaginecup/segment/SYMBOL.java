@@ -1,7 +1,11 @@
 package com.luoyuanhang.imaginecup.segment;
 /**
- * 标点库
- * @author Administrator
+ * 各种符号库
+ * 包括：
+ * 	1.标点库
+ * 	2.词性标注库
+ * 
+ * @author Luo Yuanhang
  *
  */
 public class SYMBOL {
