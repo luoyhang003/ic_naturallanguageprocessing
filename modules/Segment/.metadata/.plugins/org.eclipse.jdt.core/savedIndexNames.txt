@@ -1,0 +1,25 @@
+INDEX VERSION 1.127+/Users/jason/Project/Git/ic_naturallanguageprocessing/modules/Segment/.metadata/.plugins/org.eclipse.jdt.core
+2835230672.index
+1572325224.index
+4112856711.index
+3302703152.index
+430844602.index
+2545238116.index
+1833648217.index
+3712507179.index
+3914475439.index
+1384487945.index
+639694709.index
+1271342938.index
+3266567714.index
+2865898160.index
+3676725848.index
+1334622778.index
+216496041.index
+69963518.index
+156905802.index
+2535718965.index
+1819685514.index
+3321539481.index
+2754424148.index
+2046291189.index

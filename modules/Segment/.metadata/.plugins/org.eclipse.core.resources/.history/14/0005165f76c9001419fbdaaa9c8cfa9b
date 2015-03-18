@@ -1,0 +1,13 @@
+package com.luoyuanhang.segment.java;
+
+import java.io.UnsupportedEncodingException;
+
+
+public class NLPIR {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

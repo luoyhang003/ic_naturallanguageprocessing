@@ -1,0 +1,6 @@
+E:\Project\Git\ic_naturallanguageprocessing\modules\Segment\Segment\bin\x64\Debug\Segment.exe.config
+E:\Project\Git\ic_naturallanguageprocessing\modules\Segment\Segment\bin\x64\Debug\Segment.exe
+E:\Project\Git\ic_naturallanguageprocessing\modules\Segment\Segment\bin\x64\Debug\Segment.pdb
+E:\Project\Git\ic_naturallanguageprocessing\modules\Segment\Segment\obj\x64\Debug\Segment.exe
+E:\Project\Git\ic_naturallanguageprocessing\modules\Segment\Segment\obj\x64\Debug\Segment.pdb
+E:\Project\Git\ic_naturallanguageprocessing\modules\Segment\Segment\obj\x64\Debug\Segment.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<test.txt>
+  <text>
+    <text_head subject="主题" source="path"/>
+    <text_keywords content="可以/v/3.59/6#音乐播放/n_new/3.33/2#音乐/n/1.74/3#播放/v/1.74/3#天气/n/1.39/2#"/>
+    <text_body>
+      <para pid="1">
+        <s sid="1">身为/v 上班族/n 每天/r 都/d 要/v 为/v 上班/vi 而/cc 忙碌/a ， 每天/r 要/v 处理/v 的/ude1 事情/n 太/d 多/a 了/y ， 常常/d 因为/p 忘记/v 某/rz 件/q 事/n 而/cc 烦恼/an ， 希望/v 有/vyou 这么/rz 一个/mq 软件/n 可以/v 帮助/v 我/rr</s>
+        <s sid="2">在/p 首/m 页/q 可以/v 显示/v 我/rr 明天/t 要/v 做/v 的/ude1 事情/n 的/ude1 便/d 签/v ， 并且/c 我/rr 可以/v 随时/d 修改/v 这些/rz 便/d 签/v ， 这样/rzv 我/rr 就/d 不会/v 忘记/v 了/y ， 右/f 上/vf 角/n 有/vyou 显示/v 天气/n 的/ude1 东西/n 来/vf 提醒/v 我/rr 明天/t 天气/n 如何/ryv ， 当然/d 偶尔/d 听/v 一/m 下/vf 音乐/n 放松/v 一下/mq 也/d 是/vshi 不错/a 的/ude1 ， 可以/v 在/p 右/f 下/vf 角/n 有/vyou 一个/mq 音乐/n 播放/v 按钮/n ， 点/qt 击/vg 可以/v 打开/v 音乐/n 播放/v 的/ude1 页面/n ， 播放/v 时/ng 可以/v 展示/v 一些/mq 比较/d 炫/vg 的/ude1 特技/n 啦/y ， 哈哈/o</s>
+      </para>
+    </text_body>
+  </text>
+</test.txt>

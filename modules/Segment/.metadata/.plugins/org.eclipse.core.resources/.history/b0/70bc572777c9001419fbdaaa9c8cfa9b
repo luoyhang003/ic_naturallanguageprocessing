@@ -1,0 +1,15 @@
+package com.luoyuanhang.segment.java;
+
+import java.io.UnsupportedEncodingException;
+import utils.SystemParas;
+import com.sun.jna.Library;
+import com.sun.jna.Native;
+
+public class NLPIR {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

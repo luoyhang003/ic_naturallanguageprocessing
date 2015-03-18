@@ -1,0 +1,30 @@
+package com.luoyuanhang.segment.java;
+
+import java.io.UnsupportedEncodingException;
+//import utils.SystemParas;
+import com.sun.jna.Library;
+import com.sun.jna.Native;
+
+public class NLPIR {
+	
+	public interface CLibrary extends Library{
+		CLibrary Instance = (CLibrary)Native.loadLibrary("../../../../../libs/NLPIR", CLibrary.class);
+		
+		public int NLPIR_Init(byte[] sDataPath, int encoding,byte[] sLicenceCode);
+		
+		public String NLPIR_ParagraphProcess(String sSrc, int bPOSTagged);
+		
+		public String NLPIR_GetKeyWords(String sLine, int nMaxKeyLimit,boolean bWeightOut);
+		
+		public void NLPIR_Exit();
+	}
+	
+
+	
+	public static void main(String[] args) throws Exception{
+		String argu = "";
+		String System_charset = "GBK";
+		int charset_type = 1;
+	}
+
+}
