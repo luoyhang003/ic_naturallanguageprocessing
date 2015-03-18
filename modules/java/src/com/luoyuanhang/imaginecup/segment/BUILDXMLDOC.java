@@ -10,7 +10,6 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.dom4j.Node;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
@@ -53,6 +52,8 @@ public class BUILDXMLDOC {
 		Element ele_para = ele_textbody.addElement("para");
 		ele_para.addAttribute("pid", "1");
 		
+//		sourceString =cutWordsAndPure(sourceString);
+		
 		for(int i = 0; i < SYMBOL.PUNC_CODE.length;i++){
 			sourceString = sourceString.replaceAll(SYMBOL.PUNC_CODE[i],"");
 		}
@@ -61,7 +62,7 @@ public class BUILDXMLDOC {
 		//分句
 		for(int i = 0; i < sentences.length - 1; i++){
 			//动态添加元素
-			Element ele_s = ele_para.addElement("s").addAttribute("sid",""+(i+1)).addText(sentences[i]);
+			Element ele_s = ele_para.addElement("s").addAttribute("sid",""+(i+1)).addText(cutWordsAndPure(sentences[i]));
 		}
 		//将XML输出到文件
 		try{
