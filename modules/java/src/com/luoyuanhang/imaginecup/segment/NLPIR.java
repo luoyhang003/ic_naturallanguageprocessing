@@ -79,7 +79,9 @@ public class NLPIR {
 		int charset_type = 1;
 		int init_flag = CLibrary.Instance.NLPIR_Init(argu.getBytes(system_charset), charset_type, "1".getBytes(system_charset));
 		
-		CLibrary.Instance.NLPIR_AddUserWord("首页 PAGE");
+//		CLibrary.Instance.NLPIR_AddUserWord("首页 PAGE");
+		
+		AddUserWords("dic/dic.txt");
 		
 		if(0 == init_flag){
 			System.out.println("init fail!");
@@ -102,8 +104,29 @@ public class NLPIR {
 		//返回分词结果
 		return result;
 	}
+
 	
-	
+	public static void AddUserWords(String filePath){
+		try{
+			String encoding = "UTF-8";
+			File file = new File(filePath);
+			if(file.isFile()&&file.exists()){
+				InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);
+				BufferedReader bufferReader = new BufferedReader(read);
+				String lineText = "";
+				while((lineText = bufferReader.readLine()) != null){
+					System.out.println(lineText);
+					CLibrary.Instance.NLPIR_AddUserWord(lineText);
+				}
+			}
+			else{
+				System.out.println("未找到文件！");
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
 		
 	
 
