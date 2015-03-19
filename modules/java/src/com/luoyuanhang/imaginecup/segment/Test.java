@@ -2,7 +2,7 @@ package com.luoyuanhang.imaginecup.segment;
 
 /**
  * Test¿‡
- * @author Administrator
+ * @author Yuanhang Luo
  *
  */
 public class Test {

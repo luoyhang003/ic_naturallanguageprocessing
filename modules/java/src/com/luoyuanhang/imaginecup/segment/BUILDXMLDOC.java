@@ -106,7 +106,7 @@ public class BUILDXMLDOC {
 			}
 		}
 		for(int i = 0; i < words.length; i++){
-			output += words[i];
+			output += words[i] + " ";
 		}
 		return output;
 	}

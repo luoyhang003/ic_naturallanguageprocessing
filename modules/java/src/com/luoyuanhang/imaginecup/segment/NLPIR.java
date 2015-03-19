@@ -105,7 +105,10 @@ public class NLPIR {
 		return result;
 	}
 
-	
+	/**
+	 * 添加用户词典并进行词性标注
+	 * @param filePath
+	 */
 	public static void AddUserWords(String filePath){
 		try{
 			String encoding = "UTF-8";
