@@ -54,11 +54,10 @@ public class NLPIR {
             
             File file=new File(fileName);
             
-            if(file.isFile() && file.exists()){ 
+            if(file.isFile() && file.exists()){
             	//判断文件是否存在
             	String temp = null;
-                InputStreamReader read = new InputStreamReader(
-                new FileInputStream(file),encoding);
+                InputStreamReader read = new InputStreamReader(new FileInputStream(file),encoding);
                 BufferedReader bufferedReader = new BufferedReader(read);
 
                 while((temp = bufferedReader.readLine()) != null){
@@ -78,9 +77,7 @@ public class NLPIR {
 		String system_charset = "UTF-8";
 		int charset_type = 1;
 		int init_flag = CLibrary.Instance.NLPIR_Init(argu.getBytes(system_charset), charset_type, "1".getBytes(system_charset));
-		
-//		CLibrary.Instance.NLPIR_AddUserWord("首页 PAGE");
-		
+				
 		AddUserWords("dic/dic.txt");
 		
 		if(0 == init_flag){
@@ -104,6 +101,43 @@ public class NLPIR {
 		//返回分词结果
 		return result;
 	}
+	
+	/**
+	 * 分词但不进行词性标注
+	 * @param fileName
+	 * @return
+	 * @throws Exception
+	 */
+	public static String[] SegmentNoPos(String sourceString) throws Exception{
+		//保存分词结果
+		String result[];
+		//进行分词，对NLPIR初始化
+		String argu = "";
+		//字符编码
+		String system_charset = "UTF-8";
+		int charset_type = 1;
+		int init_flag = CLibrary.Instance.NLPIR_Init(argu.getBytes(system_charset), charset_type, "1".getBytes(system_charset));
+		//添加用户自定义词典		
+		AddUserWords("dic/dic.txt");
+		
+		if(0 == init_flag){
+			System.out.println("init fail!");
+			return null;
+		}
+		//保存分词结果		
+		String nativeBytes = null;
+		try{
+			//分词
+			nativeBytes = CLibrary.Instance.NLPIR_ParagraphProcess(sourceString, 1);
+			System.out.println(nativeBytes);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		result = nativeBytes.split(" ");
+		//返回分词结果
+		return result;
+	}
+
 
 	/**
 	 * 添加用户词典并进行词性标注
@@ -118,7 +152,6 @@ public class NLPIR {
 				BufferedReader bufferReader = new BufferedReader(read);
 				String lineText = "";
 				while((lineText = bufferReader.readLine()) != null){
-					System.out.println(lineText);
 					CLibrary.Instance.NLPIR_AddUserWord(lineText);
 				}
 			}
