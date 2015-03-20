@@ -10,11 +10,11 @@ package com.luoyuanhang.imaginecup.segment;
  */
 public class SYMBOL {
 	/*-------------分句标点--------------*/
-	static String PUNC_SENTENCE = ".?!。？！：:";
+	public static String PUNC_SENTENCE = ".?!。？！：:";
 	/*-----------分句标点词性标注-----------*/
-	static String[] PUNC_CODE = {"/wkz","/wky","/wyx","/wyy","/wj","/ww","/wt","/wd","/wf","/wn","/wm","/ws","/wp","/wb","/wh"};
+	public static String[] PUNC_CODE = {"/wkz","/wky","/wyx","/wyy","/wj","/ww","/wt","/wd","/wf","/wn","/wm","/ws","/wp","/wb","/wh"};
 	/*-----------无意义词性标注------------*/
-	static String[] POS_USELESS = {"/u","/d","/q","/vshi","/vyou","/z","/a","/m","/p","/e","/x","/y","/cc"};
+	public static String[] POS_USELESS = {"/u","/d","/q","/vshi","/vyou","/z","/a","/m","/p","/e","/x","/y","/cc"};
 	/*----------用户自定义词典标注----------*/
-	static String[] POS_UESRDIC = {"/PAGE ","/WID "};
+	public static String[] POS_UESRDIC = {"/PAGE ","/WID "};
 }

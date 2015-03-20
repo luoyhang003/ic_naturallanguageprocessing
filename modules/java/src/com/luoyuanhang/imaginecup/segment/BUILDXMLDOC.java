@@ -63,7 +63,6 @@ public class BUILDXMLDOC {
 		for(int i = 0; i < sentences.length - 1; i++){
 			//动态添加元素
 			Element ele_s = ele_para.addElement("s").addAttribute("sid",""+(i+1)).addText(cutWordsAndPure(sentences[i]));
-//			Element ele_s = ele_para.addElement("s").addAttribute("sid",""+(i+1)).addText(sentences[i]);
 
 		}
 		//将XML输出到文件
