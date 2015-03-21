@@ -103,14 +103,14 @@ public class NLPIR {
 	}
 	
 	/**
-	 * 分词但不进行词性标注
+	 * 分词进行词性标注
 	 * @param fileName
 	 * @return
 	 * @throws Exception
 	 */
-	public static String[] SegmentNoPos(String sourceString) throws Exception{
+	public static String SegmentWithPos(String sourceString) throws Exception{
 		//保存分词结果
-		String result[];
+		String result;
 		//进行分词，对NLPIR初始化
 		String argu = "";
 		//字符编码
@@ -129,11 +129,11 @@ public class NLPIR {
 		try{
 			//分词
 			nativeBytes = CLibrary.Instance.NLPIR_ParagraphProcess(sourceString, 1);
-			System.out.println(nativeBytes);
+//			System.out.println(nativeBytes);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		result = nativeBytes.split(" ");
+		result = nativeBytes;
 		//返回分词结果
 		return result;
 	}

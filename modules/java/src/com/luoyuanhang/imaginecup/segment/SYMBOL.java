@@ -17,4 +17,5 @@ public class SYMBOL {
 	public static String[] POS_USELESS = {"/u","/d","/q","/vshi","/vyou","/z","/a","/m","/p","/e","/x","/y","/cc"};
 	/*----------用户自定义词典标注----------*/
 	public static String[] POS_UESRDIC = {"/PAGE ","/WID "};
+	
 }
