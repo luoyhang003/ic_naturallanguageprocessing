@@ -1,2 +1,16 @@
-首页 PAGE
+﻿首页 PAGE
+页面 PAGE
 便签 WID
+取消 WID
+按钮 WID
+主页键 WID
+暂停键 WID
+开始键 WID
+确定 WID
+图片 WID
+文字 WID
+文本框 WID
+星标键 WID
+视频 WID
+相册 WID
+音乐播放 WID

@@ -3,11 +3,11 @@
 <test.txt>
   <text>
     <text_head subject="主题" source="path"/>
-    <text_keywords content="可以/v/3.59/6#音乐播放/n_new/3.33/2#音乐/n/1.74/3#播放/v/1.74/3#天气/n/1.39/2#"/>
+    <text_keywords content="可以/v/3.59/6#音乐播放/WID/1.66/2#天气/n/1.39/2#显示/v/1.39/2#忘记/v/1.39/2#"/>
     <text_body>
       <para pid="1">
         <s sid="1">身为/v 上班族/n 每天/r 要/v 为/v 上班/vi ， 每天/r 要/v 处理/v 事情/n ， 忘记/v 某/rz 事/n ， 希望/v 这么/rz 软件/n 可以/v 帮助/v 我/rr</s>
-        <s sid="2">首页/PAGE 可以/v 显示/v 我/rr 明天/t 要/v 做/v 事情/n 便签/WID ， 并且/c 我/rr 可以/v 修改/v 这些/rz 便签/WID ， 这样/rzv 我/rr 不会/v 忘记/v ， 右/f 上/vf 角/n 显示/v 天气/n 东西/n 来/vf 提醒/v 我/rr 明天/t 天气/n 如何/ryv ， 听/v 下/vf 音乐/n 放松/v ， 可以/v 右/f 下/vf 角/n 音乐/n 播放/v 按钮/n ， 击/vg 可以/v 打开/v 音乐/n 播放/v 页面/n ， 播放/v 时/ng 可以/v 展示/v 炫/vg 特技/n ， 哈哈/o</s>
+        <s sid="2">首页/PAGE 可以/v 显示/v 我/rr 明天/t 要/v 做/v 事情/n 便签/WID ， 并且/c 我/rr 可以/v 修改/v 这些/rz 便签/WID ， 这样/rzv 我/rr 不会/v 忘记/v ， 右/f 上/vf 角/n 显示/v 天气/n 东西/n 来/vf 提醒/v 我/rr 明天/t 天气/n 如何/ryv ， 听/v 下/vf 音乐/n 放松/v ， 可以/v 右/f 下/vf 角/n 音乐播放/WID 按钮/WID ， 击/vg 可以/v 打开/v 音乐播放/WID 页面/PAGE ， 播放/v 时/ng 可以/v 展示/v 炫/vg 特技/n ， 哈哈/o</s>
       </para>
     </text_body>
   </text>
