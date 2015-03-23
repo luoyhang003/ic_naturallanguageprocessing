@@ -161,9 +161,26 @@ public class NLPIR {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * ´¦Àí¹Ø¼ü´Ê
+	 * @param source
+	 * @return
+	 */
+	public String pureKeyWords(String source){
+		String keywords[] = source.split("#");
+		for(int i = 0; i < keywords.length; i++){
+			if(!SYMBOL.isExist(SYMBOL.POS_USE, keywords[i]))
+				keywords[i]="";
+		}
+		String result = "";
+		for(int i = 0; i < keywords.length; i++){
+			result += keywords[i];
+		}
+		return result;
 		
 	}
-		
 	
-
+	
 }

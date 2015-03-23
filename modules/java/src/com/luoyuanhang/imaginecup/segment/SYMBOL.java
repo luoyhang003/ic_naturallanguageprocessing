@@ -17,5 +17,20 @@ public class SYMBOL {
 	public static String[] POS_USELESS = {"/u","/d","/q","/vshi","/vyou","/z","/a","/m","/p","/e","/x","/y","/cc"};
 	/*----------用户自定义词典标注----------*/
 	public static String[] POS_UESRDIC = {"/PAGE ","/WID "};
+	/*-------------实义词---------------*/
+	public static String[] POS_USE = {"/PAGE","/WID","/n"};
 	
+	/**
+	 * 判断标注是否出现在标注组中
+	 * @param arr
+	 * @param source
+	 * @return
+	 */
+	public static boolean isExist(String[] arr, String source){
+		for(int i = 0; i < arr.length; i++){
+			if(source.contains(arr[i]))
+				return true;
+		}
+		return false;
+	}
 }

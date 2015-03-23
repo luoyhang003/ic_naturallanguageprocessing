@@ -13,7 +13,12 @@ public class Dictionary {
 	//字典条目List
 	private ArrayList<String[]> vocabularyList = new ArrayList<String[]>();
 	
-	
+
+	/**
+	 * 判断某词是否存在于词典中
+	 * @param targetWord
+	 * @return
+	 */
 	private boolean isExist(String targetWord){
 		int n = vocabularyList.size();
 		for(int i = 0; i < n; i++){
@@ -44,10 +49,20 @@ public class Dictionary {
 		}
 	}
 	
+	/**
+	 * 得到词语和词性标注
+	 * @param index
+	 * @return
+	 */
 	public String[] getWordAndPos(int index){
 		return vocabularyList.get(index);
 	}
 	
+	/**
+	 * 仅获取词语
+	 * @param index
+	 * @return
+	 */
 	public String getWord(int index){
 		return vocabularyList.get(index)[0];
 	}
