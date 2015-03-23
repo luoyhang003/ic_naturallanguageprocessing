@@ -97,7 +97,7 @@ public class NLPIR {
 			e.printStackTrace();
 		}
 		result[0] = nativeBytes;
-		result[1] = nativeByte;
+		result[1] = pureKeyWords(nativeByte);
 		//返回分词结果
 		return result;
 	}
@@ -168,7 +168,7 @@ public class NLPIR {
 	 * @param source
 	 * @return
 	 */
-	public String pureKeyWords(String source){
+	public static String pureKeyWords(String source){
 		String keywords[] = source.split("#");
 		for(int i = 0; i < keywords.length; i++){
 			if(!SYMBOL.isExist(SYMBOL.POS_USE, keywords[i]))
@@ -176,8 +176,15 @@ public class NLPIR {
 		}
 		String result = "";
 		for(int i = 0; i < keywords.length; i++){
-			result += keywords[i];
+			result += keywords[i] + " ";
 		}
+		
+		
+		
+		
+		
+		
+		
 		return result;
 		
 	}

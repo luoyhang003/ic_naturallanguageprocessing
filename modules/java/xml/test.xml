@@ -3,7 +3,7 @@
 <test.txt>
   <text>
     <text_head subject="主题" source="path"/>
-    <text_keywords content="可以/v/3.59/6#音乐播放/WID/1.66/2#天气/n/1.39/2#显示/v/1.39/2#忘记/v/1.39/2#"/>
+    <text_keywords content=" 音乐播放/WID/1.66/2 天气/n/1.39/2   "/>
     <text_body>
       <para pid="1">
         <s sid="1">身为/v 上班族/n 每天/r 要/v 为/v 上班/vi ， 每天/r 要/v 处理/v 事情/n ， 忘记/v 某/rz 事/n ， 希望/v 这么/rz 软件/n 可以/v 帮助/v 我/rr</s>
