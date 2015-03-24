@@ -178,13 +178,7 @@ public class NLPIR {
 		for(int i = 0; i < keywords.length; i++){
 			result += keywords[i] + " ";
 		}
-		
-		
-		
-		
-		
-		
-		
+				
 		return result;
 		
 	}

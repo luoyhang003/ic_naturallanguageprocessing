@@ -67,6 +67,12 @@ public class Dictionary {
 		return vocabularyList.get(index)[0];
 	}
 	
+	public void outputAllWords(){
+		for(int i = 0; i < size; i++){
+			System.out.println(vocabularyList.get(i)[0]);
+		}
+	}
+	
 }
 
 

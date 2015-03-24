@@ -83,6 +83,8 @@ public class Bayes {
 			String str = strList.get(i);
 			String temp[] = str.split("/");
 			dictionary.add(temp[0], temp[1]);
+			dictionary.outputAllWords();
+			
 		}
 
 	}
