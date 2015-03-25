@@ -4,5 +4,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="libs/jna-4.0.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/Project/Git/ic_naturallanguageprocessing/modules/java/libs/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/ic_naturallanguageprocessing/modules/java/libs/jython.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

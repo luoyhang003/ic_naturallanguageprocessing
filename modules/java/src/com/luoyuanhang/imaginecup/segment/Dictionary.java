@@ -23,7 +23,7 @@ public class Dictionary {
 		int n = vocabularyList.size();
 		for(int i = 0; i < n; i++){
 			if(targetWord.equals(vocabularyList.get(i)[0]))
-				return true;
+				return true; 
 		}
 		return false;
 	}
