@@ -9,9 +9,9 @@ import org.python.util.PythonInterpreter;
 
 public class PythonInterface {
 	public static void python()throws Exception{
-		Runtime.getRuntime().exec("python test.py");
+		Runtime.getRuntime().exec("python E:\\test.py");
 		
-		PythonInterpreter interpreter = new PythonInterpreter();
-		interpreter.execfile("bayes.py");
+//		PythonInterpreter interpreter = new PythonInterpreter();
+//		interpreter.execfile("E:\\ic_naturallanguageprocessing\\modules\\java\\bayes.py");
 	}
 }

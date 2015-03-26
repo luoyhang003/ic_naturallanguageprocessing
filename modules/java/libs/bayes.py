@@ -60,11 +60,8 @@ def testingNB():
 		
 testingNB()		
 
-poem = 'gkgkggjkghg'
-
-f = file('poem.txt', 'w') # open for 'w'riting
-f.write(poem) # write text to file
-f.close() # close the file
+f = file('123.txt','w+')
+f.write("print 'hello,world'")
 
 
 
