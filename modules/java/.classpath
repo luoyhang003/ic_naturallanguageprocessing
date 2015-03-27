@@ -8,7 +8,6 @@
 	<classpathentry exported="true" kind="lib" path="E:/ic_naturallanguageprocessing/modules/java/libs/servlet-api.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/ic_naturallanguageprocessing/modules/java/libs/json.org.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/ic_naturallanguageprocessing/modules/java/libs/osbcp-css-parser-1.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="E:/ic_naturallanguageprocessing/modules/java/libs/jsoup-1.7.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="E:/ic_naturallanguageprocessing/modules/java/libs/jsoup-1.8.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

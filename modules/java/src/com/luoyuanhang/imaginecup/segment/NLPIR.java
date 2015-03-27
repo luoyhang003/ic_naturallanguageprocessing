@@ -44,7 +44,7 @@ public class NLPIR {
 	 * @return words
 	 * @throws Exception
 	 */
-	public static String[] Segment(String fileName) throws Exception{
+	public static String[] Segment(String fileName, int i) throws Exception{
 		//保存分词结果
 		String result[]={"",""};
 		String sourceString = "";
@@ -101,6 +101,46 @@ public class NLPIR {
 		//返回分词结果
 		return result;
 	}
+	
+	/**
+	 * 
+	 * @param sourceString
+	 * @return
+	 * @throws Exception
+	 */
+	public static String[] Segment(String sourceString) throws Exception{
+		//保存分词结果
+		String result[]={"",""};
+		//进行分词，对NLPIR初始化
+		String argu = "";
+		String system_charset = "UTF-8";
+		int charset_type = 1;
+		int init_flag = CLibrary.Instance.NLPIR_Init(argu.getBytes(system_charset), charset_type, "1".getBytes(system_charset));
+				
+		AddUserWords("dic/dic.txt");
+		
+		if(0 == init_flag){
+			System.out.println("init fail!");
+			return null;
+		}
+		//保存分词结果		
+		String nativeBytes = null;
+		//保存关键词
+		String nativeByte = null;
+		try{
+			//分词
+			nativeBytes = CLibrary.Instance.NLPIR_ParagraphProcess(sourceString, 1);
+			//获取关键词
+			nativeByte = CLibrary.Instance.NLPIR_GetKeyWords(sourceString, 5, true);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		result[0] = nativeBytes;
+		result[1] = pureKeyWords(nativeByte);
+		//返回分词结果
+		return result;
+	}
+
 	
 	/**
 	 * 分词进行词性标注
