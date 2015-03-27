@@ -1,10 +1,10 @@
-# encoding: utf-8
+# -*- coding:gb2312 -*-
 
 from numpy import *
 
 def loadDataSet():
 
-    postingList=[['æˆ‘', 'æƒ³è¦', 'ä¸€æ¬¾', 'æ’­æ”¾', 'éŸ³ä¹', 'è½¯ä»¶'],['ä»Šå¤©', 'æˆ‘', 'åœ¨', 'é£Ÿå ‚', 'åƒäº†', 'ä¸¤', 'ç¢—', 'ç±³é¥­'],['å¹³æ—¶', 'æƒ³è¦', 'å¬', 'éŸ³ä¹', 'æ¥', 'æ”¾æ¾'],['è¶…è¶…', 'ä»Šå¤©', 'åƒäº†', 'ä¸€ä¸ª', 'é¥¼'],['æˆ‘', 'æƒ³è¦', 'ä¸€ä¸ª', 'æœ‰', 'ä¾¿ç­¾', 'çš„', 'è½¯ä»¶'],['æˆ‘', 'å¹³æ—¶', 'å¾ˆ', 'å–œæ¬¢', 'å¬', 'éŸ³ä¹']]
+    postingList=[['ÎÒ', 'ÏëÒª', 'Ò»¿î', '²¥·Å', 'ÒôÀÖ', 'Èí¼ş'],['½ñÌì', 'ÎÒ', 'ÔÚ', 'Ê³ÌÃ', '³ÔÁË', 'Á½', 'Íë', 'Ã×·¹'],['Æ½Ê±', 'ÏëÒª', 'Ìı', 'ÒôÀÖ', 'À´', '·ÅËÉ'],['³¬³¬', '½ñÌì', '³ÔÁË', 'Ò»¸ö', '±ı'],['ÎÒ', 'ÏëÒª', 'Ò»¸ö', 'ÓĞ', '±ãÇ©', 'µÄ', 'Èí¼ş'],['ÎÒ', 'Æ½Ê±', 'ºÜ', 'Ï²»¶', 'Ìı', 'ÒôÀÖ']]
 
     classVec = [1,0,1,0,0,1]
     return postingList,classVec
@@ -41,11 +41,12 @@ def trainNB0(trainMatrix,trainCategory):
     return p0Vect,p1Vect,pAbusive
 
 def classifyNB(vec2Classify, p0Vec, p1Vec, pClass1):
-    p0 = sum(vec2Classify * p0Vec) + log(1.0 - pClass1)
-    if p1 > p0:
-        return 1
-    else:
-        return 0
+	p1 = sum(vec2Classify * p1Vec) + log(pClass1)
+	p0 = sum(vec2Classify * p0Vec) + log(1.0 - pClass1)
+	if p1 > p0:
+		return 1
+	else:
+		return 0
 		
 def testingNB():
 	listOPosts, listClasses = loadDataSet()
@@ -53,20 +54,19 @@ def testingNB():
 	trainMat = []
 	for postInDoc in listOPosts:
 		trainMat.append(setOfWords2Vec(myVocabList, postInDoc))
-	p0V,p1V,pAb = trainNB0(array(trainMat),array(listClasses))
-	testEntry = ['åªæ˜¯','æƒ³','å¬','éŸ³ä¹']
+	p0V,p1V,pAB = trainNB0(array(trainMat),array(listClasses))
+	testEntry = ['Ö»ÊÇ','Ïë','Ìı','ÒôÀÖ']
 	thisDoc = array(setOfWords2Vec(myVocabList, testEntry))
-	print testEntry,'åˆ†ç±»ä¸º',classifyNB(thisDoc, p0V, p1V, pAB)
-		
+	print testEntry,'·ÖÀàÎª',classifyNB(thisDoc, p0V, p1V, pAB)
+	
 testingNB()		
 
-poem = 'gkgkggjkghg'
-
-f = file('poem.txt', 'w') # open for 'w'riting
-f.write(poem) # write text to file
-f.close() # close the file
-
-
-
-
+file = open('E:/testpy.txt','a')
+file.write('ÕâÊÇ×·¼ÓµÄÄÚÈİ£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡')
+file.close()
+file = open('E:/testpy.txt','w')
+file.write('ÕâÊÇÖØĞ´µÄÄÚÈİ£¬»áÇå³ıÒÔÇ°µÄÊı¾İ£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡')
+file.close()
+file = open('E:/testpy.txt','r')
+readlines = file.readlines()
 
